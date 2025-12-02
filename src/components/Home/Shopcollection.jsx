@@ -1,4 +1,4 @@
-export default function Shopcollection() {
+export default function ShopCollection() {
   return (
     <div className="max-w-6xl mx-auto py-12">
       <h1 className="text-4xl text-black mb-12">Shop Collection</h1>
