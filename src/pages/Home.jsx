@@ -4,7 +4,7 @@ import Hero from "../components/Home/Hero";
 import LatestArtcile from "../components/Home/LatestArtcile";
 import Newsfeed from "../components/Home/Newsfeed";
 import OfferTiming from "../components/Home/OfferTiming";
-import Shopcollection from "../components/Home/ShopCollection.jsx";
+import ShopCollection from "../components/Home/ShopCollection";
 import Newslatter from "../components/ui/Newslatter";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <Featured />
       <CategoryGrid />
       <OfferTiming />
-      <Shopcollection />
+      <ShopCollection />
       <LatestArtcile />
       <Newslatter />
       <Newsfeed />
