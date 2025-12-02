@@ -4,7 +4,7 @@ import Hero from "../components/Home/Hero";
 import LatestArtcile from "../components/Home/LatestArtcile";
 import Newsfeed from "../components/Home/Newsfeed";
 import OfferTiming from "../components/Home/OfferTiming";
-import Shopcollection from "../components/Home/ShopCollection";
+import Shopcollection from "../components/Home/ShopCollection.jsx";
 import Newslatter from "../components/ui/Newslatter";
 
 export default function Home() {
