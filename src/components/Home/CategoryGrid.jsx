@@ -33,16 +33,21 @@ export default function CategoryGrid() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-12 ">
+    <div className="max-w-6xl mx-auto py-12 px-4">
       <h1 className="text-4xl text-black mb-12 text-center">
         Shop by Categories
       </h1>
 
-      <div className="grid grid-cols-3 gap-6">
-        {categories.map((c, i) => (
-          <div key={i} className="w-[375px]">
-            <img src={c.categoryImage} alt={c.categoryName} />
-            <p className="mt-6 text-center">{c.categoryName}</p>
+      {/* Fully Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 place-items-center">
+        {categories.map((c) => (
+          <div key={c.id} className="w-full max-w-[375px] text-center p-4">
+            <img
+              src={c.categoryImage}
+              alt={c.categoryName}
+              className="w-full h-auto object-cover rounded"
+            />
+            <p className="mt-4 text-lg font-medium">{c.categoryName}</p>
           </div>
         ))}
       </div>

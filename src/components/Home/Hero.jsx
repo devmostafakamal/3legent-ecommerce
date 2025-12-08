@@ -7,7 +7,7 @@ export default function Hero() {
       className="bg-cover bg-center"
       style={{ backgroundImage: `url(${heroBg})` }}
     >
-      <div className="max-w-6xl mx-auto py-48">
+      <div className="max-w-6xl mx-auto py-48 px-2">
         <h1
           className="text-[72px] font-medium leading-[1.2] tracking-[-2px]
           bg-linear-to-b from-white/80 via-white/90 to-white/80

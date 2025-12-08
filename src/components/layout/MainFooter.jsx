@@ -3,7 +3,7 @@ import SocialIcons from "../ui/SocialIcons";
 
 export default function MainFooter() {
   return (
-    <div className="max-w-6xl mx-auto py-20">
+    <div className="max-w-6xl mx-auto py-20 px-4">
       {/* TOP SECTION */}
       <div className="text-white flex gap-8 items-start mb-16">
         {/* Brand + Social */}

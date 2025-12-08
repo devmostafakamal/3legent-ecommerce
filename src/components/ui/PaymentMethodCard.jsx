@@ -6,7 +6,7 @@ import StripeCard from "../../assets/icons/stripe_card.png";
 import VisaCard from "../../assets/icons/visa_card.png";
 export default function PaymentMethodCard() {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <img src={VisaCard} alt="visa card" className="h-8 w-12" />
 
       <img

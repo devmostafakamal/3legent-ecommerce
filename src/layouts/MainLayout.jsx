@@ -5,16 +5,17 @@ import Navbar from "../components/layout/Navbar";
 export default function MainLayout() {
   return (
     <>
-      <div>
-        <header className="bg-white max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto overflow-x-hidden">
+        <header className="bg-white">
           <Navbar />
         </header>
 
-        <main className="max-w-[1440px] mx-auto">
+        {/* Remove extra max-w — keep padding only */}
+        <main className="">
           <Outlet />
         </main>
 
-        <footer className="bg-black max-w-[1440px] mx-auto">
+        <footer className="bg-black px-4">
           <MainFooter />
         </footer>
       </div>

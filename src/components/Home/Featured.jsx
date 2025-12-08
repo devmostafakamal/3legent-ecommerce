@@ -35,10 +35,12 @@ export default function Featured() {
       <Carousel
         responsive={responsive}
         infinite={true}
-        autoPlay={true}
+        autoPlay={false}
         autoPlaySpeed={2000}
         keyBoardControl={true}
         arrows={false}
+        containerClass="pb-16"
+        itemClass="px-2"
         showDots={true}
       >
         {topProducts.map((product, i) => (
