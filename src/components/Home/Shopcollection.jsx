@@ -4,7 +4,7 @@ function ShopCollection() {
       <h1 className="text-4xl text-black mb-12">Shop Collection</h1>
 
       {/* GRID FIX: auto rows prevent layout break */}
-      <div className="grid grid-cols-2 gap-6 auto-rows-[260px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 auto-rows-[260px]">
         {/* LEFT BIG IMAGE */}
         <div className="row-span-2 bg-gray-100 relative">
           <div className="w-full h-full aspect-4/3">
