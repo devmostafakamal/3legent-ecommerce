@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoBagHandleOutline, IoClose, IoSearchOutline } from "react-icons/io5";
-import { NavLink } from "react-router"; // ← make sure it's react-router-dom
+import { NavLink } from "react-router";
 
 export default function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -24,8 +24,8 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden sm:flex">
-          <ul className="flex items-center gap-10">
-            <li>
+          <ul className="flex items-center gap-10 ">
+            <li className="">
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
