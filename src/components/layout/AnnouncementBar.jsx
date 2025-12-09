@@ -22,7 +22,7 @@ function AnnouncementBar() {
 
   return (
     <div className="bg-[#38CB89]  py-3 px-4 sm:flex items-center justify-center gap-3 text-sm font-medium relative hidden">
-      <LuTicketPercent className="text-lg flex-shrink-0" />
+      <LuTicketPercent className="text-lg shrink-0" />
       <p className="flex items-center gap-2">
         <span>30% off storewide — Limited time!</span>
         <a
