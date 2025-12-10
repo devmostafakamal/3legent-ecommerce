@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoBagHandleOutline, IoClose, IoSearchOutline } from "react-icons/io5";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 export default function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -44,7 +44,12 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <IoSearchOutline size={24} />
           <CgProfile size={24} />
-          <IoBagHandleOutline size={24} />
+          <Link to="/cart">
+            <IoBagHandleOutline
+              size={24}
+              className="cursor-pointer hover:text-black/70"
+            />
+          </Link>
         </div>
       </div>
 

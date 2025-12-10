@@ -5,6 +5,7 @@ import NotFound from "../pages/error/NotFound";
 import Home from "../pages/Home";
 import ShopPage from "../pages/ShopPage";
 import ProductPage from "../pages/ProductPage";
+import CartPage from "../pages/CartPage";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: "contactUs",
         Component: ContactUs,
+      },
+      {
+        path: "/cart",
+        Component: CartPage,
       },
     ],
   },

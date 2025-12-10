@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../components/shop/Sidebar";
 import ProductGrid from "../components/shop/ProductGrid";
-import TopBar from "../components/shop/Topbar";
+import TopBar from "../components/shop/TopBar";
 
 function ShopPage() {
   return (
