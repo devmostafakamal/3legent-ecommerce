@@ -7,6 +7,7 @@ import ShopPage from "../pages/ShopPage";
 import ProductPage from "../pages/ProductPage";
 import CartPage from "../pages/CartPage";
 import CheckoutDetails from "../pages/CheckoutDetails";
+import OrderComplete from "../pages/OrderComplete";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       {
         path: "/checkout-details",
         Component: CheckoutDetails,
+      },
+      {
+        path: "/order-complete",
+        Component: OrderComplete,
       },
     ],
   },

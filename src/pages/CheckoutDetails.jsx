@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { LuX } from "react-icons/lu";
 import StepProgress from "../components/cart/StepProgress";
+import { Link } from "react-router";
 
 export default function CheckoutDetails() {
   const [promoCode, setPromoCode] = useState("");
@@ -140,9 +141,11 @@ export default function CheckoutDetails() {
                 </div>
               </div>
 
-              <button className="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition">
-                Place Order
-              </button>
+              <Link to="/order-complete">
+                <button className="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition">
+                  Place Order
+                </button>
+              </Link>
             </div>
 
             {/* Right Column - Order Summary */}
@@ -152,7 +155,7 @@ export default function CheckoutDetails() {
               <div className="space-y-6">
                 {cartItems.map((item) => (
                   <div key={item.id} className="flex gap-4">
-                    <div className="bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 flex-shrink-0" />
+                    <div className="bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 shrink-0" />
                     <div className="flex-1">
                       <h4 className="font-medium">{item.name}</h4>
                       <p className="text-sm text-gray-500">Color: Black</p>
