@@ -3,7 +3,7 @@ import React from "react";
 function TopBar() {
   return (
     <div className="flex items-center justify-between mb-6">
-      <h2 className="text-xl font-semibold">Living Room</h2>
+      <h2 className="text-xl font-semibold hidden sm:flex">Living Room</h2>
 
       <div className="flex items-center gap-4">
         {/* Sort */}
