@@ -13,7 +13,7 @@ export default function CartPage() {
       price: 19,
       qty: 2,
       image:
-        "https://images.unsplash.com/photo-1526178613552-d7c4f050d1d8?auto=format&fit=crop&w=400&q=80",
+        "https://i.ibb.co.com/KRM6pyF/9fdf56160ab038c306c555f679abf13892bf171f-1.png",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ export default function CartPage() {
       price: 19,
       qty: 2,
       image:
-        "https://images.unsplash.com/photo-1526178613552-d7c4f050d1d8?auto=format&fit=crop&w=400&q=80",
+        "https://i.ibb.co.com/KRM6pyF/9fdf56160ab038c306c555f679abf13892bf171f-1.png",
     },
   ]);
 
@@ -42,14 +42,16 @@ export default function CartPage() {
   const total = subtotal + shipping;
 
   return (
-    <div className="max-w-6xl mx-auto py-12">
+    <div className="max-w-6xl mx-auto py-12 px-4">
       <h1 className="text-4xl font-semibold mb-10">Cart</h1>
       <StepProgress currentStep={1} />
 
-      <div className="grid grid-cols-3 gap-12">
-        {/* LEFT (Cart Items) */}
-        <div className="col-span-2">
-          <div className="grid grid-cols-4 border-b pb-4 font-semibold text-gray-600">
+      {/* Responsive Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* LEFT */}
+        <div className="md:col-span-2">
+          {/* Table Header - Hide on mobile */}
+          <div className="hidden md:grid grid-cols-4 border-b pb-4 font-semibold text-gray-600">
             <p className="col-span-2">Product</p>
             <p>Quantity</p>
             <p>Subtotal</p>

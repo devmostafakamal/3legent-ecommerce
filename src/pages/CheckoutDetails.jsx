@@ -31,7 +31,7 @@ export default function CheckoutDetails() {
           {/* Progress Steps */}
           <StepProgress currentStep={2} />
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
             {/* Left Column - Forms */}
             <div className="space-y-6">
               {/* Contact Information */}
@@ -39,62 +39,70 @@ export default function CheckoutDetails() {
                 <h2 className="text-lg font-semibold mb-4">
                   Contact Information
                 </h2>
-                <div className="grid grid-cols-2 gap-4">
+
+                {/* Make this responsive */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="First name"
-                    className="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                    className="border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                   />
                   <input
                     type="text"
                     placeholder="Last name"
-                    className="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                    className="border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                   />
                 </div>
+
                 <input
                   type="tel"
                   placeholder="Phone number"
-                  className="w-full mt-4 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full mt-4 border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                 />
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full mt-4 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full mt-4 border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                 />
               </div>
 
               {/* Shipping Address */}
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h2 className="text-lg font-semibold mb-4">Shipping Address</h2>
+
                 <input
                   type="text"
                   placeholder="Street Address *"
-                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                 />
+
                 <input
                   type="text"
                   placeholder="Country *"
-                  className="w-full mt-4 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full mt-4 border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                 />
-                <div className="grid grid-cols-2 gap-4 mt-4">
+
+                {/* City + State + Zip - Responsive */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                   <input
                     type="text"
                     placeholder="Town / City"
-                    className="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                    className="border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                   />
                   <div className="grid grid-cols-2 gap-4">
                     <input
                       type="text"
                       placeholder="State"
-                      className="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      className="border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                     />
                     <input
                       type="text"
                       placeholder="Zip Code"
-                      className="border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      className="border rounded-lg px-4 py-3 focus:ring-2 focus:ring-black"
                     />
                   </div>
                 </div>
+
                 <label className="flex items-center mt-4 text-sm">
                   <input type="checkbox" className="mr-2" />
                   Use a different billing address (optional)
@@ -104,6 +112,7 @@ export default function CheckoutDetails() {
               {/* Payment Method */}
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h2 className="text-lg font-semibold mb-4">Payment method</h2>
+
                 <div className="space-y-3">
                   <label className="flex items-center p-4 border-2 border-black rounded-lg cursor-pointer">
                     <input
@@ -114,7 +123,7 @@ export default function CheckoutDetails() {
                     />
                     <span className="font-medium">Pay by Card Credit</span>
                   </label>
-                  <label className="flex items-center p-4 border rounded-lg mt-3 cursor-pointer">
+                  <label className="flex items-center p-4 border rounded-lg cursor-pointer">
                     <input type="radio" name="payment" className="mr-3" />
                     <span>Paypal</span>
                   </label>
@@ -126,7 +135,8 @@ export default function CheckoutDetails() {
                     placeholder="1234 1234 1234"
                     className="w-full border rounded-lg px-4 py-3"
                   />
-                  <div className="grid grid-cols-2 gap-4">
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input
                       type="text"
                       placeholder="MM/YY"
@@ -141,8 +151,9 @@ export default function CheckoutDetails() {
                 </div>
               </div>
 
+              {/* Button */}
               <Link to="/order-complete">
-                <button className="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition">
+                <button className="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-gray-800">
                   Place Order
                 </button>
               </Link>
@@ -159,7 +170,9 @@ export default function CheckoutDetails() {
                     <div className="flex-1">
                       <h4 className="font-medium">{item.name}</h4>
                       <p className="text-sm text-gray-500">Color: Black</p>
+
                       <div className="flex items-center justify-between mt-2">
+                        {/* Qty box responsive */}
                         <div className="flex items-center border rounded-lg">
                           <button className="p-2">
                             <BiMinus className="w-4 h-4" />
@@ -169,6 +182,7 @@ export default function CheckoutDetails() {
                             <BiPlus className="w-4 h-4" />
                           </button>
                         </div>
+
                         <span className="font-semibold">
                           ${item.price.toFixed(2)}
                         </span>
@@ -180,7 +194,7 @@ export default function CheckoutDetails() {
 
               {/* Promo Code */}
               <div className="mt-8">
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="text"
                     value={promoCode}
@@ -192,6 +206,7 @@ export default function CheckoutDetails() {
                     Apply
                   </button>
                 </div>
+
                 {appliedCode && (
                   <div className="flex items-center justify-between mt-3 text-sm">
                     <span className="flex items-center text-green-600">
