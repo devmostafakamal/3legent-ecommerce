@@ -2,6 +2,7 @@ import { useState } from "react";
 import ShippingOption from "../components/cart/ShippingOption";
 import CartItem from "../components/cart/CartItem";
 import StepProgress from "../components/cart/StepProgress";
+import { Link } from "react-router";
 
 export default function CartPage() {
   const [cart, setCart] = useState([
@@ -43,7 +44,7 @@ export default function CartPage() {
   return (
     <div className="max-w-6xl mx-auto py-12">
       <h1 className="text-4xl font-semibold mb-10">Cart</h1>
-      <StepProgress />
+      <StepProgress currentStep={1} />
 
       <div className="grid grid-cols-3 gap-12">
         {/* LEFT (Cart Items) */}
@@ -103,9 +104,11 @@ export default function CartPage() {
             </div>
           </div>
 
-          <button className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800">
-            Checkout
-          </button>
+          <Link to="/checkout-details">
+            <button className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800">
+              Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>
